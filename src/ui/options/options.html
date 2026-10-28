@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chrome AI Memory — Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Privacy &amp; controls</h1>
+      <p class="lead">
+        MVP defaults: on-device extraction, local IndexedDB + stub embeddings,
+        inject when the memory pack changes. No cloud sync.
+      </p>
+
+      <section>
+        <h2>Consent</h2>
+        <p id="consent-status"></p>
+        <div class="row">
+          <button id="btn-consent-on" type="button">Grant Auto-memory consent</button>
+          <button id="btn-consent-off" type="button" class="ghost">Revoke consent</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Pause</h2>
+        <p>Pause stops learn + inject without wiping memories.</p>
+        <button id="btn-toggle-pause" type="button" class="ghost">Toggle Pause</button>
+      </section>
+
+      <section>
+        <h2>Data</h2>
+        <p>Memories and vectors stay in this browser profile (IndexedDB).</p>
+        <div class="row">
+          <button id="btn-export" type="button" class="ghost">Export JSON</button>
+          <button id="btn-wipe" type="button" class="danger ghost">Wipe all memories</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Embeddings</h2>
+        <p>
+          Current model: <code>stub-hash-v1</code> (deterministic bag-of-hashes).
+          Swap via <code>Embedder</code> interface for WASM MiniLM later; document
+          first-run download in README when bundled.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+:root {
+  --bg: #0f1210;
+  --panel: #1a1f1c;
+  --ink: #e8eee9;
+  --muted: #8a968c;
+  --accent: #3d8f6a;
+  --accent-ink: #04140c;
+  --border: #2a322c;
+  --warn: #c4a35a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+  padding: 14px;
+  font: 13px/1.45 "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(120% 80% at 100% 0%, #1e2a22 0%, transparent 55%),
+    var(--bg);
+}
+
+h1 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.sub {
+  margin: 2px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.row span {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}

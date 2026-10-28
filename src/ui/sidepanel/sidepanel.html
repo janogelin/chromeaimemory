@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memory pack</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">What Claude gets</p>
+        <h1>Memory pack</h1>
+      </div>
+      <div class="header-actions">
+        <button id="btn-refresh" type="button" class="ghost">Refresh</button>
+        <button id="tab-pack" type="button" class="tab active">Pack</button>
+        <button id="tab-all" type="button" class="tab">All</button>
+      </div>
+    </header>
+
+    <p id="meta" class="meta"></p>
+
+    <section id="view-pack">
+      <ul id="pack-list" class="list"></ul>
+      <p id="pack-empty" class="empty hidden">
+        No memories in the current pack. Chat on claude.ai with Auto-memory on.
+      </p>
+    </section>
+
+    <section id="view-all" class="hidden">
+      <form id="add-form" class="add">
+        <input id="add-body" type="text" placeholder="Add a memory…" required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="all-list" class="list"></ul>
+      <div class="manager-actions">
+        <button id="btn-export" type="button" class="ghost">Export JSON</button>
+        <label class="ghost file">
+          Import
+          <input id="import-file" type="file" accept="application/json,.json" hidden />
+        </label>
+        <button id="btn-wipe" type="button" class="danger ghost">Wipe all</button>
+      </div>
+    </section>
+
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>
