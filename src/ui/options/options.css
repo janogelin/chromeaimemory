@@ -1,0 +1,85 @@
+:root {
+  --bg: #0e120f;
+  --ink: #e8eee9;
+  --muted: #8a968c;
+  --accent: #3d8f6a;
+  --accent-ink: #04140c;
+  --border: #2a322c;
+  --panel: #171c18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 15px/1.5 "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(80% 50% at 0% 0%, #1a2820, transparent 60%),
+    var(--bg);
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.lead,
+section p {
+  color: var(--muted);
+}
+
+section {
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+button.danger {
+  color: #f0c4bc;
+  border-color: #5a322c;
+}
+
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.9em;
+}
